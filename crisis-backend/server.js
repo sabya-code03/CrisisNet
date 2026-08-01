@@ -26,7 +26,7 @@ app.post('/api/sos', async (req, res) => {
         const { rawMessage, latitude, longitude, userId } = req.body;
         console.log(`🚨 SOS from ${userId}`);
 
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
         const result = await model.generateContent(`Emergency: ${rawMessage}. Location: ${latitude},${longitude}. Give 1-sentence advice.`);
         
         res.status(200).json({ success: true, aiSummary: result.response.text() });
