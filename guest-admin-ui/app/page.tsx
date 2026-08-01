@@ -43,8 +43,8 @@ export default function GuestSOSApp() {
     };
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/sos`, {
-        method: "POST",
+      const response = await fetch("https://crisisnet-3jh1.onrender.com/api/sos", {
+    method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
