@@ -1,6 +1,6 @@
 # 🚨 CrisisNet: Instant Emergency Broadcast System
 
-CrisisNet is a real-time, fault-tolerant emergency broadcast prototype designed to bridge the critical communication gap between citizens in distress and first responders. Built by **The Big O's** for the Solution Challenge 2026.
+CrisisNet is a real-time, fault-tolerant emergency broadcast prototype designed to bridge the critical communication gap between citizens in distress and first responders. Built by **Sabyasachi Ghosh** .
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://crisis-net-app-view.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Frontend-Next.js-black)](https://nextjs.org/)
