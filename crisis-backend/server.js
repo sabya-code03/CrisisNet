@@ -44,6 +44,11 @@ app.post('/api/sos', async (req, res) => {
       // Bas console mein error aayega, aur code aage badh jayega.
       console.error("⚠️ AI Advice failed, but SOS is safe:", aiError.message);
     }
+    const alert = {
+triage: { type: "SOS Alert", severity: "High", details: rawMessage, action_required: aiAdvice || "Immediate attention needed" },
+timestamp: new Date().toISOString()
+};
+io.emit("new_crisis_alert", alert);
 
     // STEP 3: Final Success Response (AI pass ho ya fail, user ko 200 ok milega)
     res.status(200).json({ success: true, aiSummary: aiAdvice });
